@@ -3,15 +3,17 @@
 A small, fully offline tome used by Grimoire's smoke tests and local demos. Add it with:
 
 ```sh
-grimoire tome add ./example --ref main
+grm tome add ./example --ref main
 ```
 
 It registers itself as `example` (the name comes from `tome.rn`).
 
 ## Layout
 
-- `tome.rn` — the tome manifest (package index).
-- `index.nuon` — binary package index. Empty here, so installs build from source.
+- `tome.rn` — the tome manifest. Its `packages` block points at a local `dist/` directory
+  (`format: "local"`), the directory `grm tome build` would publish into.
+- `dist/` — git-ignored publish directory holding the package index and prebuilt archives.
+  This tome ships none (it builds from source), so `dist/` is absent until you build.
 - `runes/` — package definitions:
   - `hello` — minimal package, no dependencies.
   - `greeter` — has a runtime dependency on `hello`.
@@ -22,7 +24,7 @@ It registers itself as `example` (the name comes from `tome.rn`).
 ## Try it
 
 ```sh
-grimoire install hello
-grimoire install greeter   # also installs hello
-grimoire install bundle    # verifies the source checksum first
+grm install hello
+grm install greeter   # also installs hello
+grm install bundle    # verifies the source checksum first
 ```

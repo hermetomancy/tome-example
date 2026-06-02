@@ -2,9 +2,12 @@ export const tome = {
   name: "example"
   description: "Example Grimoire tome used by the smoke tests and local demos"
 
+  # This tome ships its packages as source runes, so it publishes no prebuilt archives.
+  # `grm tome build` would write archives and index.nuon into the git-untracked dist/
+  # directory; with none built, installs fall back to a source build of the matching rune.
   packages: {
-    repo: "."
-    format: "git"
+    repo: "dist"
+    format: "local"
     index: "index.nuon"
   }
 }
