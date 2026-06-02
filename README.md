@@ -10,7 +10,7 @@ It registers itself as `example` (the name comes from `tome.rn`).
 
 ## Layout
 
-- `tome.rn` — the tome manifest (sources + package index).
+- `tome.rn` — the tome manifest (package index).
 - `index.nuon` — binary package index. Empty here, so installs build from source.
 - `runes/` — package definitions:
   - `hello` — minimal package, no dependencies.
