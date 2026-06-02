@@ -3,7 +3,7 @@
 A small, fully offline tome used by Grimoire's smoke tests and local demos. Add it with:
 
 ```sh
-grm tome add ./example --ref main
+grm tome add ./tome-example --ref main
 ```
 
 It registers itself as `example` (the name comes from `tome.rn`).
