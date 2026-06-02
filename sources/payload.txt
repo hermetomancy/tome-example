@@ -1,0 +1,2 @@
+grimoire example payload
+This file is fetched and checksum-verified before the `bundle` rune builds.

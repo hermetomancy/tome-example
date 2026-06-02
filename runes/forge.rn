@@ -1,0 +1,22 @@
+# Showcases a build dependency: `hello` is installed before `forge` builds, but is
+# not recorded as a runtime dependency.
+export const package = {
+  name: "forge"
+  version: "0.1.0"
+  summary: "Example package with a build dependency on `hello`"
+  homepage: "https://example.com/forge"
+  license: "MIT"
+  targets: ["linux-x86_64-gnu" "macos-aarch64-darwin" "windows-x86_64-gnu"]
+  sources: {}
+  deps: {
+    build: { default: ["hello"] }
+    runtime: []
+  }
+  bins: { forge: "bin/forge" }
+}
+
+export def build [ctx] {
+  let bin_dir = ($ctx.package_dir | path join "bin")
+  mkdir $bin_dir
+  "#!/usr/bin/env sh\nprintf 'forged by grimoire\\n'\n" | save ($bin_dir | path join "forge")
+}

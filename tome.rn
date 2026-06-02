@@ -1,0 +1,15 @@
+export const tome = {
+  name: "example"
+  description: "Example Grimoire tome used by the smoke tests and local demos"
+
+  sources: {
+    repo: "."
+    ref: "main"
+  }
+
+  packages: {
+    repo: "."
+    format: "git"
+    index: "index.nuon"
+  }
+}
