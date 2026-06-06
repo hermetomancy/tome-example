@@ -6,7 +6,7 @@ export const package = {
   summary: "Example package that builds from a checksum-verified source"
   homepage: "https://example.com/bundle"
   license: "MIT"
-  targets: ["linux-x86_64-gnu" "macos-aarch64-darwin" "windows-x86_64-gnu"]
+  targets: ["linux-x86_64-gnu" "linux-x86_64-musl" "linux-aarch64-gnu" "linux-aarch64-musl" "macos-x86_64-darwin" "macos-aarch64-darwin" "freebsd-x86_64-unknown" "freebsd-aarch64-unknown"]
   sources: {
     payload: {
       url: "../sources/payload.txt"
