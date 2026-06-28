@@ -3,8 +3,10 @@ export const package = {
   name: "greeter"
   version: "0.1.0"
   summary: "Example package with a runtime dependency on `hello`"
-  homepage: "https://example.com/greeter"
-  license: "MIT"
+  meta: {
+    homepage: "https://example.com/greeter"
+    license: "MIT"
+  }
   sources: {}
   deps: {
     build: {}

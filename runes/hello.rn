@@ -2,8 +2,10 @@ export const package = {
   name: "hello"
   version: "0.1.0"
   summary: "A tiny example Grimoire package"
-  homepage: "https://example.com/hello"
-  license: "MIT"
+  meta: {
+    homepage: "https://example.com/hello"
+    license: "MIT"
+  }
   sources: {}
   deps: {
     build: {}

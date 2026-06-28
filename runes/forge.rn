@@ -4,8 +4,10 @@ export const package = {
   name: "forge"
   version: "0.1.0"
   summary: "Example package with a build dependency on `hello`"
-  homepage: "https://example.com/forge"
-  license: "MIT"
+  meta: {
+    homepage: "https://example.com/forge"
+    license: "MIT"
+  }
   sources: {}
   deps: {
     build: { default: ["hello"] }

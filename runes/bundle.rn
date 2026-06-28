@@ -4,8 +4,10 @@ export const package = {
   name: "bundle"
   version: "0.1.0"
   summary: "Example package that builds from a checksum-verified source"
-  homepage: "https://example.com/bundle"
-  license: "MIT"
+  meta: {
+    homepage: "https://example.com/bundle"
+    license: "MIT"
+  }
   sources: {
     payload: {
       url: "../sources/payload.txt"
